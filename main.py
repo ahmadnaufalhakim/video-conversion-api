@@ -45,9 +45,7 @@ def convert() :
         # Remove all old uploaded videos
         os.unlink(input_video_path)
 
-        return send_file(output_video)
-    else :
-        return render_template("home.html")
+        return send_file(output_video, as_attachment=True)
 
 if __name__ == "__main__" :
     app.run()
