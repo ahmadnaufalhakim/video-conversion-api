@@ -19,11 +19,20 @@
     <input type="file" name="input-video" />
     <label for="output-format">to:</label>
     <select name="output-format">
-      <option>mp4</option>
-      <option>flv</option>
-      <option>avi</option>
-      <option>webm</option>
-      <option>mov</option>
+      <optgroup label="Video">
+        <option>mp4</option>
+        <option>flv</option>
+        <option>avi</option>
+        <option>webm</option>
+        <option>mov</option>
+      </optgroup>
+      <optgroup label="Audio">
+        <option>mp3</option>
+        <option>aac</option>
+        <option>wav</option>
+        <option>flac</option>
+        <option>ogg</option>
+      </optgroup>
     </select>
     <input type="submit" value="Convert" />
   </form>
