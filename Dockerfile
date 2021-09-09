@@ -1,9 +1,9 @@
-FROM python:3.8
+FROM python:3.8-alpine
 COPY . /app
 WORKDIR /app
 
-RUN apt-get update -y && \
-    apt-get install -y ffmpeg && \
+RUN apk update && \
+    apk add ffmpeg && \
     pip install -r requirements.txt
 
 ENV FLASK_APP main.py
