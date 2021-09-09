@@ -6,7 +6,5 @@ RUN apk update && \
     apk add ffmpeg && \
     pip install -r requirements.txt
 
-ENV FLASK_APP main.py
-
 EXPOSE 5000
-CMD [ "flask", "run", "--host", "0.0.0.0" ]
+CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "--workers", "5", "wsgi:app" ]

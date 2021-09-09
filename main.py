@@ -46,6 +46,3 @@ def convert() :
                 app.logger.error("Error removing or closing downloaded file handle", error)
             return response
         return send_file(output_video_path, as_attachment=True)
-
-if __name__ == "__main__" :
-    app.run(host="0.0.0.0")
